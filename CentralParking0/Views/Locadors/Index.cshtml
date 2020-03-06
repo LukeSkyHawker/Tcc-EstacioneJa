@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CentralParking0.Models.Locador>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_Dono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome_Dono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Conta_Corrente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.senha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_Dono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome_Dono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Conta_Corrente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.senha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.CPF }) |
+                @Html.ActionLink("Details", "Details", new { id=item.CPF }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.CPF })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿@model CentralParking0.Models.Locador
+@{
+     ViewBag.Title = "Cadastrar";
+}
+
+
+<form action="~/Home/Cadastrar" method="post">
+    @Html.AntiForgeryToken()
+    <div style="margin-left:2px">
+        <br />
+        <br /><br />
+        <h3 class="text-center">Locador</h3>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                @Html.LabelFor(model => model.usuario, htmlAttributes: new { @class = "form-label col-md-2" })
+                @Html.EditorFor(model => model.usuario, new { htmlAttributes = new { @class = "form-control col-md-6" } })
+                @Html.ValidationMessage("Locador.usuario")
+
+            </div>
+            <div class="form-group col-md-6">
+                @Html.LabelFor(model => model.senha, htmlAttributes: new { @class = "form-label col-md-2" })
+                @Html.EditorFor(model => model.senha, new { htmlAttributes = new { @class = "form-control col-md-6" } })
+                @Html.ValidationMessage("Locador.senha")
+
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "form-label col-md-2" })
+            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control col-md-6" } })
+            @Html.ValidationMessage("Locador.email")
+
+        </div>
+        <div class="form-group">
+            @Html.Label("Nome Completo", htmlAttributes: new { @class = "form-label col-md-2" })
+            @Html.EditorFor(model => model.Nome_Dono, new { htmlAttributes = new { @class = "form-control col-md-6" } })
+            @Html.ValidationMessage("Locador.Nome_Dono")
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-10">
+                @Html.LabelFor(model => model.CPF, htmlAttributes: new { @class = "form-label col-md-2 " })
+                @Html.EditorFor(model => model.CPF, new { htmlAttributes = new { placeholder = "000.000.000-00", @class = "form-control col-md-5" } })
+                @Html.ValidationMessageFor(model => model.CPF, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="form-group col-md-10">
+                @Html.Label("Conta Corrente", htmlAttributes: new { @class = "form-label col-md-2" })
+                @Html.EditorFor(model => model.Conta_Corrente, new { htmlAttributes = new { placeholder = "0000 00000000-0 ", @class = "form-control col-md-5" } })
+                @Html.ValidationMessageFor(model => model.Conta_Corrente, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+        <div class="text-center col-md-2 align-content-center">
+            <button type="submit" class=" btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" value="Cadastrar"> Cadastrar </button>
+        </div>
+    </div>
+</form>
+

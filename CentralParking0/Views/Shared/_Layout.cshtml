@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Central Parking </title>
+
+
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/device-mockups/device-mockups.min.css">
+    <link href="~/Content/css/new-age.min.css" rel="stylesheet">
+
+
+</head>
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background:linear-gradient(to top,#00c7ff05,#009ae0)">
+        <div class="container" id="page-top">
+            @Html.ActionLink("Central Parking", "Index", "Home", new { area = "" }, new { @class = "navbar-brand js-scroll-trigger" })
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("App", "Index", "Home", new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Sobre", "Index", "Home", new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Cadastro", "Index", "Home", new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Contato", "Index", "Home", new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Central Parking</p>
+        </footer>
+    </div>
+    
+    <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Content/js/new-age.min.js"></script>
+</body>
+</html>
