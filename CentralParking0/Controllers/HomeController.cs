@@ -46,7 +46,7 @@ namespace CentralParking0.Controllers
         {
             return View();
         }
-
+        //Vontade de morrer CARALHOOOOOOOOOOOOOOOOOOOOOO
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(Locador usuario)
